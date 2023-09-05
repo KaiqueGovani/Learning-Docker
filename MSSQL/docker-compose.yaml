@@ -14,3 +14,11 @@ services:
     ports:
       - "1433:1433"
     restart: always
+
+  adminer:
+    image: adminer:latest
+    container_name: adminer_container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - MSSQL_DB

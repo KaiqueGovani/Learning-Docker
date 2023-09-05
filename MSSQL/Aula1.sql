@@ -8,6 +8,7 @@ CREATE TABLE Veiculo (
     IDVeiculo INT NOT NULL PRIMARY KEY IDENTITY,
     Proprietario VARCHAR(255) NOT NULL,
     Placa VARCHAR(7) NOT NULL,
+    DataCompra DATETIME NULL,
     IDModelo INT NOT NULL  REFERENCES Modelo(IDModelo),
     Valor NUMERIC(18,2) NOT NULL,
    /*  CONSTRAINT FK_Modelo_Veiculo FOREIGN KEY (IDModelo) REFERENCES Modelo(IDModelo),
