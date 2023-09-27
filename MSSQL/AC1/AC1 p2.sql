@@ -10,7 +10,8 @@ SELECT r.Nome, COUNT(IDPersonagem) Qtde_Personagens From Raca r LEFT JOIN Person
 
 --QUESTÃO 4
 SELECT
-	c.Nome, AVG(p.Poder) Media_Poder, SUM(p.Poder) Soma_Poder
+	c.Nome, AVG(p.Poder) Media_Poder, 
+	SUM(p.Poder) Soma_Poder
 FROM 
 		Classe c INNER JOIN Personagem p
 		ON c.IDClasse = p.IDClasse
@@ -19,7 +20,11 @@ HAVING AVG(p.Poder) >= 100;
 
 --QUESTÃO 5
 SELECT 
-	p.Nome AS Nome_Personagem, p.DataNascimento AS Data_Personagem, r.Nome AS Nome_Raca, c.Nome AS Nome_Classe, h.Nome Nome_Habilidade
+	p.Nome AS Nome_Personagem, 
+	p.DataNascimento AS Data_Personagem, 
+	r.Nome AS Nome_Raca, 
+	c.Nome AS Nome_Classe, 
+	h.Nome AS Nome_Habilidade
 FROM
 	Personagem p INNER JOIN Classe c
 ON p.IDClasse = c.IDClasse
