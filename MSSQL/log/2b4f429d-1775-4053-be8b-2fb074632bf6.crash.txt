@@ -1,0 +1,31 @@
+This program has encountered a fatal error and cannot continue running at Fri Oct 13 23:41:10 2023
+The following diagnostic information is available:
+
+         Reason: 0x00000006
+        Message: PROCESS_FAULT_FLAGS_UNHANDLED_EXCEPTION: The process [sqlservr.exe ] has encountered an unhandled exception.
+        Address: 0x3fff9ba6904c
+    Stack Trace:
+                 file://package5/windows/system32/sqlpal.dll+0x0000000000209BE2
+                 file://package5/windows/system32/sqlpal.dll+0x0000000000208156
+                 file://package5/windows/system32/sqlpal.dll+0x0000000000268DCC
+                 file://package5/windows/system32/sqlpal.dll+0x000000000026904C
+                 file://package5/windows/system32/sqlpal.dll+0x0000000000268CA5
+                 file://package5/windows/system32/sqlpal.dll+0x0000000000201F6E
+                 file://package5/windows/system32/sqlpal.dll+0x00000000003A02BB
+                 file:///windows/system32/ntdll.dll+0x00000000000F67FF
+                 file:///Windows/SYSTEM32/KERNELBASE.dll+0x00000000000871E7
+                 file:///windows/system32/ntdll.dll+0x00000000000FDEB0
+                 file:///windows/system32/ntdll.dll+0x00000000000E7456
+                 file:///windows/system32/ntdll.dll+0x00000000000FB4DF
+                 file:///windows/system32/ntdll.dll+0x000000000009BA06
+                 file:///windows/system32/ntdll.dll+0x00000000000FA22E
+                 file:///binn/sqllang.dll+0x0000000000337C7A
+        Process: 10 - sqlservr
+         Thread: 146 (application thread 0x23c)
+    Instance Id: 1f20df70-2dae-457c-b8a3-5dad7d8ea51a
+       Crash Id: 2b4f429d-1775-4053-be8b-2fb074632bf6
+    Build stamp: b8dcaba94ba55e8c79abfb73542552f6d17da76c787f3d442a0dee28117f5b1c
+   Distribution: Ubuntu 20.04.6 LTS
+     Processors: 16
+   Total Memory: 8187572224 bytes
+      Timestamp: Fri Oct 13 23:41:10 2023

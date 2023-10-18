@@ -1,0 +1,58 @@
+{
+    "reason": "0x00000006",
+    "processName": "sqlservr",
+    "pid": "10",
+    "instanceId": "1f20df70-2dae-457c-b8a3-5dad7d8ea51a",
+    "crashId": "368a7407-1474-42c4-9df8-f2f695e6ea52",
+    "threadState": "0x00007fce99d146a8",
+    "threadId": "147",
+    "libosThreadId": "0x240",
+    "buildStamp": "b8dcaba94ba55e8c79abfb73542552f6d17da76c787f3d442a0dee28117f5b1c",
+    "versions": [
+        {
+            "name": "",
+            "buildId": "b8dcaba94ba55e8c79abfb73542552f6d17da76c787f3d442a0dee28117f5b1c",
+            "buildType": "release",
+            "src": "78607fb",
+            "date": "Thu Jul 27 02:56:16 GMT 2023",
+            "buildNum": "241254"
+        },
+        {
+            "name": "PAL",
+            "buildId": "ef4d1d268c2638c99d77f540bf30c9b8fa9a1c40994d91a194fb0fc7211ab08e",
+            "buildType": "release",
+            "src": "93aa8af",
+            "date": "Thu Jul 27 02:52:11 GMT 2023",
+            "buildNum": "241254"
+        }
+    ],
+    "message": "PROCESS_FAULT_FLAGS_UNHANDLED_EXCEPTION: The process [sqlservr.exe ] has encountered an unhandled exception.",
+    "address": "0x3fffaf06904c",
+    "stackTrace": [
+        "file://package5/windows/system32/sqlpal.dll+0x0000000000209BE2",
+        "file://package5/windows/system32/sqlpal.dll+0x0000000000208156",
+        "file://package5/windows/system32/sqlpal.dll+0x0000000000268DCC",
+        "file://package5/windows/system32/sqlpal.dll+0x000000000026904C",
+        "file://package5/windows/system32/sqlpal.dll+0x0000000000268CA5",
+        "file://package5/windows/system32/sqlpal.dll+0x0000000000201F6E",
+        "file://package5/windows/system32/sqlpal.dll+0x00000000003A02BB",
+        "file:///windows/system32/ntdll.dll+0x00000000000F67FF",
+        "file:///Windows/SYSTEM32/KERNELBASE.dll+0x00000000000871E7",
+        "file:///windows/system32/ntdll.dll+0x00000000000FDEB0",
+        "file:///windows/system32/ntdll.dll+0x00000000000E7456",
+        "file:///windows/system32/ntdll.dll+0x00000000000FB4DF",
+        "file:///windows/system32/ntdll.dll+0x000000000009BA06",
+        "file:///windows/system32/ntdll.dll+0x00000000000FA22E",
+        "file:///binn/sqllang.dll+0x0000000000337C7A"
+    ],
+    "stackModules": [
+        "file://package5/windows/system32/sqlpal.dll=114923c2b4d81c2ab853d38dd7587d811,D:\\dbs\\sh\\9h43\\0726_001031\\LibOS\\Windows\\Kernel\\Init\\regular\\obj\\amd64\\sqlpal.pdb",
+        "file:///windows/system32/ntdll.dll=6b1a341b2d4e2a19006ea8fdd6e275201,ntdll.pdb",
+        "file:///Windows/SYSTEM32/KERNELBASE.dll=534f663fd71fc2e0440c0145d84e0a1a1,kernelbase.pdb",
+        "file:///binn/sqllang.dll=d1a9706b6cd046ad94f4974af88a5c322,D:\\dbs\\sh\\5uj5\\0725_175138\\cmd\\0\\obj\\x64retail\\sql\\ntdbms\\optimization\\postprofiling\\sqllang\\sqllang.vcxproj\\optimized\\sqllang.pdb"
+    ],
+    "distribution": "Ubuntu 20.04.6 LTS",
+    "processors": "16",
+    "total_memory": "8187572224",
+    "timestamp": "Tue Oct 17 00:14:53 2023"
+}
