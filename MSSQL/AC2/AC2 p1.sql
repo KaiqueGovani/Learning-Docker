@@ -91,3 +91,38 @@ BEGIN
 END;
 
 SELECT dbo.fnQtdPersonagensPorClasse(1) AS QtdPersonagens;
+
+
+--5. Criar uma Table Function (Multi-Statement) que recebe como parâmetro um inteiro e conforme 
+--o valor recebido deve retornar: 
+--a. Valor informado 1: Nome da Classe e a quantidade de personagens associados 
+--b. Valor informado 2: Nome da Raça e a quantidade de personagens associados 
+--c. Valor informado 3: Nome da Habilidade e a quantidade de personagens associados
+
+CREATE OR ALTER FUNCTION fnContagem(@op int)
+RETURNS TABLE
+AS
+RETURN
+(
+SELECT COUNT(*) AS QtdPersonagem,
+    CASE
+        WHEN @op = 1 THEN c.Nome
+        WHEN @op = 2 THEN r.Nome
+        ELSE h.Nome
+    END AS Variante
+FROM Personagem p
+JOIN Classe c
+    ON c.IDClasse = p.IDClasse
+JOIN Habilidade h 
+    ON h.IDHabilidade = c.IDHabilidade
+JOIN Raca r
+    ON r.IDRaca = p.IDRaca
+GROUP BY 
+    CASE
+        WHEN @op = 1 THEN c.Nome
+        WHEN @op = 2 THEN r.Nome
+        ELSE h.Nome
+    END
+);
+
+SELECT * FROM dbo.fnContagem(3);
