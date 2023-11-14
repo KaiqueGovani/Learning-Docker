@@ -43,4 +43,3 @@ BEGIN
     INSERT INTO LogInfo (Tabela, Informacores, DataLog) VALUES
     ('Veiculo', 'Atualização de veiculo', getdate())
 END
-go
