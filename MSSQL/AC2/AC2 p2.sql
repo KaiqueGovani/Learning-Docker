@@ -51,7 +51,7 @@ BEGIN
     INSERT INTO LogFull (Tabela, Operacao, Detalhes, DataEvento)
     VALUES ('Personagem', 
             'Insert', 
-            (SELECT CONCAT('Nome: ', i.nome, ' Raça: ', r.nome, ' Classe: ', c.nome, ' Habilidade: ', h.nome) 
+            (SELECT CONCAT('Nome: ', i.nome, ' - Raça: ', r.nome, ' - Classe: ', c.nome, ' - Habilidade: ', h.nome) 
                 FROM inserted i
                 JOIN Classe c ON c.IDClasse = i.IDClasse
                 JOIN Raca r ON r.IDRaca = i.IDRaca
@@ -61,3 +61,26 @@ END;
 
 INSERT INTO Personagem VALUES ('Ragnar', 'Destruidor', '1925-10-20', 1, 2, 63);
 SELECT * FROM LogFull;
+
+
+-- 6. Criar uma Trigger para gravar na tabela LogFull todas as exclusões realizadas na tabela Habilidade. 
+-- No  campo  Detalhes  deve  conter  o  ID,  Nome  e  o  valor  do  MultiplicadorPoder  que  está  sendo 
+-- excluído.
+GO
+CREATE or ALTER TRIGGER tgrGravaExclusoes
+ON Habilidade
+AFTER DELETE
+AS 
+BEGIN
+	INSERT INTO LogFull (Tabela, Operacao, Detalhes, DataEvento) 
+        VALUES (
+            'Habilidade',
+            'Delete',
+            (SELECT CONCAT('ID: ', CAST(d.IDHabilidade AS VARCHAR),' - Nome: ', d.Nome,' - MultiplicadorPoder: ', CAST(d.MultiplicadorPoder AS VARCHAR))
+            FROM deleted d),
+            GETDATE()
+        )
+END;
+
+INSERT INTO Habilidade VALUES ('Fogo Sombrio', '5');
+DELETE FROM Habilidade WHERE Nome = 'Fogo Sombrio';
