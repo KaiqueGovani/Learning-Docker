@@ -174,3 +174,10 @@
 2023-12-04 23:19:01.69 spid56      RemoveStaleDbEntries: Cleanup of stale DB entries skipped because master db is not memory optimized. DbId: 8.
 2023-12-04 23:19:02.64 spid56      Parallel redo is started for database 'AF' with worker pool size [8].
 2023-12-04 23:19:02.80 spid56      Parallel redo is shutdown for database 'AF' with worker pool size [8].
+2023-12-04 23:27:27.39 spid54      XE session 'telemetry_xevents' stopping.
+2023-12-04 23:27:27.42 spid54      XE session 'telemetry_xevents' started.
+2023-12-05 00:04:41.10 Logon       Error: 18456, Severity: 14, State: 8.
+2023-12-05 00:04:41.10 Logon       Login failed for user 'sa'. Reason: Password did not match that for the login provided. [CLIENT: 172.19.0.3]
+2023-12-05 00:08:53.39 spid6s      [DevOpsSnapshotTelemetryTask] Evaluating the background task.
+2023-12-05 00:27:35.30 spid54      XE session 'telemetry_xevents' stopping.
+2023-12-05 00:27:35.35 spid54      XE session 'telemetry_xevents' started.
